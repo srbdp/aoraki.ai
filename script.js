@@ -42,6 +42,50 @@ for (let i = 0; i < 200; i++) {
     stars.push(new Star());
 }
 
+// Add this function to create a burst of stars
+function createStarBurst(event) {
+    let mouseX = event.clientX;
+    let mouseY = event.clientY;
+    let burstStars = [];
+
+    for (let i = 0; i < 20; i++) {
+        let star = new Star();
+        star.x = mouseX;
+        star.y = mouseY;
+        burstStars.push(star);
+    }
+
+    return burstStars;
+}
+
+// Add event listeners for mouse and touch events
+canvas.addEventListener('mousedown', (event) => {
+    stars = stars.concat(createStarBurst(event));
+});
+
+canvas.addEventListener('touchstart', (event) => {
+    event.preventDefault();
+    stars = stars.concat(createStarBurst(event.touches[0]));
+});
+
+// Update the animate function
+// function animate() {
+//     // Use a semi-transparent black to create a fading effect for the burst stars
+//     ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+//     ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+//     for (let i = 0; i < stars.length; i++) {
+//         stars[i].update();
+//         stars[i].draw();
+//     }
+
+//     requestAnimationFrame(animate);
+// }
+
+// animate();
+
+
+
 function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
