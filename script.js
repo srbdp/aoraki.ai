@@ -3,7 +3,7 @@ class Star {
     constructor() {
         this.x = Math.random() * window.innerWidth;
         this.y = Math.random() * window.innerHeight;
-        this.size = Math.random() * 5;
+        this.size = Math.random() * 4.8 + 0.2;
         this.speedX = Math.random() * 3 - 1.5;
         this.speedY = Math.random() * 3 - 1.5;
     }
