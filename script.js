@@ -60,6 +60,7 @@ function createStarBurst(event) {
 
 // Add event listeners for mouse and touch events
 canvas.addEventListener('mousedown', (event) => {
+    event.preventDefault();
     stars = stars.concat(createStarBurst(event));
 });
 
@@ -97,4 +98,7 @@ function animate() {
     requestAnimationFrame(animate);
 }
 
-animate();
+// Wrap the animate function call inside the window 'load' event listener
+window.addEventListener('load', () => {
+    animate();
+});
