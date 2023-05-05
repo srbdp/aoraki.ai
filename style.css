@@ -1,0 +1,91 @@
+/* style.css */
+@font-face {
+    font-family: 'Roboto Mono';
+    /* font-style: normal; */
+    /* font-weight: 400; */
+    font-display: swap;
+    src: url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;400&display=swap');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: black;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    font-family: 'Roboto Mono', sans-serif;
+}
+
+#center-text {
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    font-family: 'Roboto Mono', sans-serif;
+}
+
+#logo-text-container {
+    font-size: 6em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+}
+
+#logo {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+}
+
+#subtitle {
+    font-size: 1em;
+    margin-top: 20px;
+    margin-left: auto; /* Add margin-left property */
+    margin-right: auto; /* Add margin-right property */
+    max-width: 90%; /* Add max-width property */
+}
+
+#about-aoraki {
+    font-size: .75em;
+    margin-top: 80px;
+    font-family: 'Roboto Mono', sans-serif;
+    font-weight: 100;
+    margin-left: auto; /* Add margin-left property */
+    margin-right: auto; /* Add margin-right property */
+    max-width: 90%; /* Add max-width property */
+}
+
+#contact {
+    font-size: .75em;
+    margin-top: 20px;
+    font-family: 'Roboto Mono', sans-serif;
+    font-weight: 100;
+    margin-left: auto; /* Add margin-left property */
+    margin-right: auto; /* Add margin-right property */
+    max-width: 90%; /* Add max-width property */
+}
+
+a:link,
+a:visited {
+  color: white;
+  text-decoration: underline;
+}
+
+
+@media screen and (max-width: 600px) {
+    #logo-text-container {
+        font-size: 4em;
+    }
+
+    #logo {
+        width: 100px;
+        margin-right: 5px;
+    }
+  }
+
+
+
