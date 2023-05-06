@@ -7,14 +7,19 @@ class Star {
         this.speedX = Math.random() * 0.5 - 0.25;
         this.speedY = Math.random() * 0.5 - 0.25;
         this.isBurstStar = false; // New property to identify burst stars
+        this.creationTime = Date.now(); // New property to store the creation time
     }
 
     update() {
         this.x += this.speedX;
         this.y += this.speedY;
 
+        if ((!this.isBurstStar || Date.now() - this.creationTime > 5000) && this.size > 0.2) {
+            this.size -= 0.1;
+        }
+
         // Check if the star is not a burst star before decreasing its size
-        if (!this.isBurstStar && this.size > 0.2) this.size -= 0.1;
+        // if (!this.isBurstStar && this.size > 0.2) this.size -= 0.1;
 
         // if (this.size > 0.2) this.size -= 0.1;
 
