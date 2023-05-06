@@ -6,13 +6,17 @@ class Star {
         this.size = Math.random() * 4.8 + 0.2;
         this.speedX = Math.random() * 0.5 - 0.25;
         this.speedY = Math.random() * 0.5 - 0.25;
+        this.isBurstStar = false; // New property to identify burst stars
     }
 
     update() {
         this.x += this.speedX;
         this.y += this.speedY;
 
-        if (this.size > 0.2) this.size -= 0.1;
+        // Check if the star is not a burst star before decreasing its size
+        if (!this.isBurstStar && this.size > 0.2) this.size -= 0.1;
+
+        // if (this.size > 0.2) this.size -= 0.1;
 
         if (this.x < 0 || this.x > window.innerWidth || this.y < 0 || this.y > window.innerHeight) {
             this.x = Math.random() * window.innerWidth;
@@ -52,6 +56,8 @@ function createStarBurst(event) {
         let star = new Star();
         star.x = mouseX;
         star.y = mouseY;
+        star.size = 3; // Set the size of burst stars to 5
+        star.isBurstStar = true; // Set the isBurstStar property to true for burst stars
         burstStars.push(star);
     }
 
