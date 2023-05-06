@@ -46,8 +46,9 @@ let ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
+let numberOfStars = Math.floor(window.innerWidth / 5);
 let stars = [];
-for (let i = 0; i < 200; i++) {
+for (let i = 0; i < numberOfStars; i++) {
     stars.push(new Star());
 }
 
