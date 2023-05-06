@@ -22,8 +22,8 @@ class Star {
             this.x = Math.random() * window.innerWidth;
             this.y = Math.random() * window.innerHeight;
             this.size = Math.random() * 5;
-            this.speedX = Math.random() * 3 - 1.5;
-            this.speedY = Math.random() * 3 - 1.5;
+            this.speedX = Math.random() * 0.5 - 0.25;
+            this.speedY = Math.random() * 0.5 - 0.25;
         }
     }
 
