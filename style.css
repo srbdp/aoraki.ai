@@ -33,6 +33,7 @@ body {
     align-items: center;
     justify-content: center;
     font-weight: 400;
+    margin-bottom: 20px;
 }
 
 #logo {
@@ -41,9 +42,9 @@ body {
     margin-right: 20px;
 }
 
-#subtitle {
+.subtitle {
     font-size: 1em;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     margin-left: auto; /* Add margin-left property */
     margin-right: auto; /* Add margin-right property */
     max-width: 90%; /* Add max-width property */
